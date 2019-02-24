@@ -1,0 +1,29 @@
+.loadExcelInput{
+    border:1px solid darkgray;
+    width:95vw;
+    margin-top:5px;
+    padding:2px 0 2px 0;
+}
+.exportExcel{
+    border:1px solid darkgray;
+    width:95vw;
+    margin-top:5px;
+    padding:2px 0 2px 0;
+}
+p{
+    font-weight: bold
+}
+.maincontainer {
+  padding: 5px;
+  margin: 5px;
+}
+.card {
+  padding: 5px;
+  margin: 5px;
+}
+.align {
+  padding: 10px !important;
+}
+.red-text {
+  color: red;
+}

@@ -1,0 +1,32 @@
+<div class='maincontainer'>
+  <div class="card container loadExcelInput card-primary component">
+  <div class="card-header"><b>Data Analysis</b></div>
+    <br>
+    <i class="align">Please choose an excel file</i>
+  <table class="table table-borderless">
+    <tr>
+      <td>
+        <input type="file" name="files[]" multiple id="jsonFile" accept=".xlsx" (change)="onFileChange($event)"/>
+      </td>
+    </tr>
+  </table>
+    <div class="align">
+      <b>Resolution:</b> <input type="number" [(ngModel)]='resolution'/>
+      <b> Iso Value:</b> <input type="number" [(ngModel)]='iso'/>
+  <button class="align btn btn-sm btn-success" (click)="search()">Search</button>
+</div>
+    <div *ngIf="showGrade" class="align">
+      The grade for Resolution: <i>{{ resolution }}</i> and ISO: <i>{{ iso }}</i> is <br>
+      <b>Grade: <i>{{ grade }}</i></b>.
+    </div>
+    <div *ngIf="showError" class="align red-text">
+      The given resolution and Iso cannot be related to a grade. check the inputs.
+    </div>
+</div>
+  <br>
+  <div class="card">
+    <gc-spread-sheets [hostStyle]="hostStyle" (workbookInitialized)="workbookInit($event)">
+  </gc-spread-sheets>
+  </div>
+</div>
+

@@ -1,0 +1,19 @@
+<div class="card container card-primary component">
+  <div class="card-header"><b>Data Analysis</b></div>
+  <table class="table table-borderless">
+    <tr>
+      <td>
+        <input type="file" name="photo" ng2FileSelect [uploader]="uploader"/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button type="button" class="btn btn-primary btn-s"
+                (click)="uploader.uploadAll()"
+                [disabled]="!uploader.getNotUploadedItems().length">
+          Upload File
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>
